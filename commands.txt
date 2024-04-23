@@ -1,0 +1,5 @@
+# Build the Docker image
+docker build . -t generative-recommenders
+
+# Run the container with GPU support
+docker run --gpus all -it --rm --ipc=host -v ${PWD}:/workspace -w /workspace generative-recommenders
